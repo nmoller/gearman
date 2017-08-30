@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:   gearman
+  namespace: gearman-dev-01
+  labels:
+    app: gearman-01
+
+spec:
+  containers:
+    #- image: wsimmonds/jenkins-kubernetes:2.8
+    - image: pataquets/gearmand
+    #- image: csanchez/jenkins-kubernetes:0.11
+      name: gearman-01
